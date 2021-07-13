@@ -22,13 +22,42 @@ int main()
       scanf("%d" &a[i][j]);
     }
   }
+  printf("You have entered\n");
+  for(i=0; i <= row- 1;i++)
+    {
+        for(j=0;j <= col- 1;j++)
+        {
+            printf("%d ",a[i][j]);
+            if(j == col- 1)
+            {
+                printf("\n");
+            }
+        }
+  }
   //Matrix 2 Entered by user
-  for(i=0;i<row;i++)
+  int row1;
+  int col1;
+  row1 = col;
+  printf("Enter number of Column:-> ");
+  scanf("%d", &col1);
+  for(i=0;i<row1;i++)
   {
-    for(j=0;j<col;j++)
+    for(j=0;j<col1;j++)
     {
       printf("Enter the Element%%d:-> ", i+1, j+1);
       scanf("%d" &b[i][j]);
     }
   }
+  printf("You have entered\n");
+  for(i=0; i <= row1- 1;i++)
+    {
+        for(j=0;j <= col1- 1;j++)
+        {
+            printf("%d ",b[i][j]);
+            if(j == col1- 1)
+            {
+                printf("\n");
+            }
+        }
+   }
 }
