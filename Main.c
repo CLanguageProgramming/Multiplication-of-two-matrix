@@ -19,7 +19,7 @@ int main()
     for(j=0;j<col;j++)
     {
       printf("Enter the Element%d%d:-> ", i+1, j+1);
-      scanf("%d" &a[i][j]);
+      scanf("%d", &a[i][j]);
     }
   }
   printf("You have entered\n");
@@ -44,8 +44,8 @@ int main()
   {
     for(j=0;j<col1;j++)
     {
-      printf("Enter the Element%%d:-> ", i+1, j+1);
-      scanf("%d" &b[i][j]);
+      printf("Enter the Element%d%d:-> ", i+1, j+1);
+      scanf("%d", &b[i][j]);
     }
   }
   printf("You have entered\n");
@@ -54,10 +54,33 @@ int main()
         for(j=0;j <= col1- 1;j++)
         {
             printf("%d ",b[i][j]);
-            if(j == col1- 1)
-            {
-                printf("\n");
-            }
         }
+        printf("\n");
+    }
+    //product of matrix
+    int sum=0;
+    int k;
+    for(i=0;i<row;i++)
+    {
+      for(j=0;j<col1;j++)
+      {
+        c[i][j] = 0;
+        for(k=0;k<row1;k++)
+        {
+          sum += a[i][k]*b[k][j];
+        }
+        c[i][j]=sum;
+        sum=0;
+      }
    }
+   //printing product matrix
+   printf("Produce matrix:->\n");
+   for(i=0; i <= row- 1;i++)
+    {
+        for(j=0;j <= col- 1;j++)
+        {
+            printf("%d ",c[i][j]);
+        }
+        printf("\n");
+    }
 }
